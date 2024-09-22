@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NodeJS Ts 환경 만들기</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="desc">
+    
+    <link rel="preload" href="/assets/css/0.styles.d419143b.css" as="style"><link rel="preload" href="/assets/js/app.7830cfe4.js" as="script"><link rel="preload" href="/assets/js/2.fd64779e.js" as="script"><link rel="preload" href="/assets/js/1.87595a30.js" as="script"><link rel="preload" href="/assets/js/46.8d9e6921.js" as="script"><link rel="prefetch" href="/assets/js/10.f3b75cb1.js"><link rel="prefetch" href="/assets/js/11.976b005d.js"><link rel="prefetch" href="/assets/js/12.c204bb4e.js"><link rel="prefetch" href="/assets/js/13.73e86676.js"><link rel="prefetch" href="/assets/js/14.42991e2a.js"><link rel="prefetch" href="/assets/js/15.8b128397.js"><link rel="prefetch" href="/assets/js/16.e37df2a1.js"><link rel="prefetch" href="/assets/js/17.1678b209.js"><link rel="prefetch" href="/assets/js/18.87da4873.js"><link rel="prefetch" href="/assets/js/19.0741f0b9.js"><link rel="prefetch" href="/assets/js/20.9f94b747.js"><link rel="prefetch" href="/assets/js/21.60375cff.js"><link rel="prefetch" href="/assets/js/22.a17ebb53.js"><link rel="prefetch" href="/assets/js/23.ab9d8a0f.js"><link rel="prefetch" href="/assets/js/24.7e121ed5.js"><link rel="prefetch" href="/assets/js/25.73b8a6a4.js"><link rel="prefetch" href="/assets/js/26.ce359ca1.js"><link rel="prefetch" href="/assets/js/27.0cb084ba.js"><link rel="prefetch" href="/assets/js/28.59f812d6.js"><link rel="prefetch" href="/assets/js/29.a009643a.js"><link rel="prefetch" href="/assets/js/3.e8eb28a6.js"><link rel="prefetch" href="/assets/js/30.ea581dd5.js"><link rel="prefetch" href="/assets/js/31.be0038aa.js"><link rel="prefetch" href="/assets/js/32.0a1ca104.js"><link rel="prefetch" href="/assets/js/33.1658616c.js"><link rel="prefetch" href="/assets/js/34.45e218be.js"><link rel="prefetch" href="/assets/js/35.80ac5381.js"><link rel="prefetch" href="/assets/js/36.49a57590.js"><link rel="prefetch" href="/assets/js/37.3419deb6.js"><link rel="prefetch" href="/assets/js/38.397d4285.js"><link rel="prefetch" href="/assets/js/39.18bc8ad7.js"><link rel="prefetch" href="/assets/js/4.2b3e3d8f.js"><link rel="prefetch" href="/assets/js/40.aee1c48b.js"><link rel="prefetch" href="/assets/js/41.225ef8ad.js"><link rel="prefetch" href="/assets/js/42.6312b271.js"><link rel="prefetch" href="/assets/js/43.0110f343.js"><link rel="prefetch" href="/assets/js/44.33e42a55.js"><link rel="prefetch" href="/assets/js/45.b70a7a7a.js"><link rel="prefetch" href="/assets/js/47.3490c51e.js"><link rel="prefetch" href="/assets/js/48.182fbb4a.js"><link rel="prefetch" href="/assets/js/49.d3ae4809.js"><link rel="prefetch" href="/assets/js/5.45c61f29.js"><link rel="prefetch" href="/assets/js/50.1a650643.js"><link rel="prefetch" href="/assets/js/51.3edaceff.js"><link rel="prefetch" href="/assets/js/52.72b659a4.js"><link rel="prefetch" href="/assets/js/53.c6b09781.js"><link rel="prefetch" href="/assets/js/54.91d225b5.js"><link rel="prefetch" href="/assets/js/55.8239d4b6.js"><link rel="prefetch" href="/assets/js/56.accdeb1a.js"><link rel="prefetch" href="/assets/js/57.74e66176.js"><link rel="prefetch" href="/assets/js/58.d3d1ae16.js"><link rel="prefetch" href="/assets/js/59.bfa191d4.js"><link rel="prefetch" href="/assets/js/6.d4352767.js"><link rel="prefetch" href="/assets/js/60.1b88e0b0.js"><link rel="prefetch" href="/assets/js/61.a7ba7996.js"><link rel="prefetch" href="/assets/js/62.c38e010b.js"><link rel="prefetch" href="/assets/js/63.7ca26ab8.js"><link rel="prefetch" href="/assets/js/64.8fab8344.js"><link rel="prefetch" href="/assets/js/65.6f2489ea.js"><link rel="prefetch" href="/assets/js/66.4ae9de33.js"><link rel="prefetch" href="/assets/js/67.ef7914ff.js"><link rel="prefetch" href="/assets/js/68.43e64c9b.js"><link rel="prefetch" href="/assets/js/7.955a46ff.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.b7a3ab4f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d419143b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/amazon7737" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/amazon7737" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Index</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Exception</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JPA</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Next.js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>NodeJs</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/NodeJs/NodeJS-ts.html" aria-current="page" class="active sidebar-link">NodeJS Ts 환경 만들기</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#_1-프로젝트-생성" class="sidebar-link">1. 프로젝트 생성</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#_2-express-환경을-구성하기-위해-필요한-모듈-설치" class="sidebar-link">2. express 환경을 구성하기 위해 필요한 모듈 설치</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#_3-tsconfig-json-설정" class="sidebar-link">3. tsconfig.json 설정</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#tsconfig-json-파일이-생성되면-나오는-내용" class="sidebar-link">tsconfig.json 파일이 생성되면 나오는 내용</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#express-서버-설정-tsconfig-json" class="sidebar-link">express 서버 설정 (tsconfig.json)</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#package-json-설정" class="sidebar-link">package.json 설정</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#폴더-구조-잡기" class="sidebar-link">폴더 구조 잡기</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#app-ts-에-express-코드-작성" class="sidebar-link">app.ts 에 express 코드 작성</a></li><li class="sidebar-sub-header"><a href="/NodeJs/NodeJS-ts.html#typescript-로-작성한-express-실행" class="sidebar-link">typescript 로 작성한 express 실행</a></li></ul></li><li><a href="/NodeJs/nodejs_requestip.html" class="sidebar-link">nodeJs request-ip 사용법</a></li><li><a href="/NodeJs/nodejs_schedule.html" class="sidebar-link">node-schedule로 스케줄러 구현하기</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Toy Project</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>데이터베이스</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>데이터베이스 설계 및 구축</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>소프트웨어공학</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nodejs-ts-환경-만들기"><a href="#nodejs-ts-환경-만들기" class="header-anchor">#</a> NodeJS Ts 환경 만들기</h1> <blockquote><p>NodeJs를 Typescript로 만들자.</p></blockquote> <h2 id="_1-프로젝트-생성"><a href="#_1-프로젝트-생성" class="header-anchor">#</a> 1. 프로젝트 생성</h2> <div class="language- extra-class"><pre class="language-text"><code>npm init
+</code></pre></div><h2 id="_2-express-환경을-구성하기-위해-필요한-모듈-설치"><a href="#_2-express-환경을-구성하기-위해-필요한-모듈-설치" class="header-anchor">#</a> 2. express 환경을 구성하기 위해 필요한 모듈 설치</h2> <div class="language- extra-class"><pre class="language-text"><code> npm i -D express ts-node typescript nodemon @types/node @types/express ejs
+</code></pre></div><h2 id="_3-tsconfig-json-설정"><a href="#_3-tsconfig-json-설정" class="header-anchor">#</a> 3. tsconfig.json 설정</h2> <p>TypeScript 컴파일은 tsc라는 명령어를 이용하여 컴파일합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>tsc --init
+</code></pre></div><p>tsconfig.json이라는 파일이 생성됩니다.</p> <p>컴파일러 옵션을 설정하고 프로젝트를 컴파일하는데 필요한 루트파일을 지정합니다.</p> <h2 id="tsconfig-json-파일이-생성되면-나오는-내용"><a href="#tsconfig-json-파일이-생성되면-나오는-내용" class="header-anchor">#</a> tsconfig.json 파일이 생성되면 나오는 내용</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Basic Options */</span>
+    <span class="token comment">// &quot;incremental&quot;: true,                </span>
+    <span class="token string-property property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es5&quot;</span><span class="token punctuation">,</span>                         
+    <span class="token string-property property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>                    
+    <span class="token comment">// &quot;lib&quot;: [],                            </span>
+    <span class="token comment">// &quot;allowJs&quot;: true,                   </span>
+    <span class="token comment">// &quot;jsx&quot;: &quot;preserve&quot;,                 </span>
+    <span class="token comment">// &quot;declaration&quot;: true,             </span>
+    <span class="token comment">// &quot;declarationMap&quot;: true,             </span>
+    <span class="token comment">// &quot;sourceMap&quot;: true,             </span>
+    <span class="token comment">// &quot;outFile&quot;: &quot;./&quot;,                       </span>
+    <span class="token comment">// &quot;outDir&quot;: &quot;./&quot;,                       </span>
+    <span class="token comment">// &quot;rootDir&quot;: &quot;./&quot;,                      </span>
+    <span class="token comment">// &quot;composite&quot;: true,                   </span>
+    <span class="token comment">// &quot;tsBuildInfoFile&quot;: &quot;./&quot;,              </span>
+    <span class="token comment">// &quot;removeComments&quot;: true,             </span>
+    <span class="token comment">// &quot;noEmit&quot;: true,                      </span>
+    <span class="token comment">// &quot;importHelpers&quot;: true,             </span>
+    <span class="token comment">// &quot;downlevelIteration&quot;: true,           </span>
+    <span class="token comment">// &quot;isolatedModules&quot;: true,             </span>
+
+    <span class="token comment">/* Strict Type-Checking Options */</span>
+    <span class="token string-property property">&quot;strict&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                   
+    <span class="token comment">// &quot;noImplicitAny&quot;: true,                </span>
+    <span class="token comment">// &quot;strictNullChecks&quot;: true,              </span>
+    <span class="token comment">// &quot;strictFunctionTypes&quot;: true,           </span>
+    <span class="token comment">// &quot;strictBindCallApply&quot;: true,           </span>
+    <span class="token comment">// &quot;strictPropertyInitialization&quot;: true,  </span>
+    <span class="token comment">// &quot;noImplicitThis&quot;: true,               </span>
+    <span class="token comment">// &quot;alwaysStrict&quot;: true,                 </span>
+
+    <span class="token comment">/* Additional Checks */</span>
+    <span class="token comment">// &quot;noUnusedLocals&quot;: true,              </span>
+    <span class="token comment">// &quot;noUnusedParameters&quot;: true,        </span>
+    <span class="token comment">// &quot;noImplicitReturns&quot;: true,             </span>
+    <span class="token comment">// &quot;noFallthroughCasesInSwitch&quot;: true,    </span>
+
+    <span class="token comment">/* Module Resolution Options */</span>
+    <span class="token comment">// &quot;moduleResolution&quot;: &quot;node&quot;,            </span>
+    <span class="token comment">// &quot;baseUrl&quot;: &quot;./&quot;,                     </span>
+    <span class="token comment">// &quot;paths&quot;: {},                           </span>
+    <span class="token comment">// &quot;rootDirs&quot;: [],                        </span>
+    <span class="token comment">// &quot;typeRoots&quot;: [],                      </span>
+    <span class="token comment">// &quot;types&quot;: [],                          </span>
+    <span class="token comment">// &quot;allowSyntheticDefaultImports&quot;: true,  </span>
+    <span class="token string-property property">&quot;esModuleInterop&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                 
+    <span class="token comment">// &quot;preserveSymlinks&quot;: true,             </span>
+    <span class="token comment">// &quot;allowUmdGlobalAccess&quot;: true,         </span>
+
+    <span class="token comment">/* Source Map Options */</span>
+    <span class="token comment">// &quot;sourceRoot&quot;: &quot;&quot;,    </span>
+    <span class="token comment">// &quot;mapRoot&quot;: &quot;&quot;,                      </span>
+    <span class="token comment">// &quot;inlineSourceMap&quot;: true,              </span>
+    <span class="token comment">// &quot;inlineSources&quot;: true,                 </span>
+
+    <span class="token comment">/* Experimental Options */</span>
+    <span class="token comment">// &quot;experimentalDecorators&quot;: true,        </span>
+    <span class="token comment">// &quot;emitDecoratorMetadata&quot;: true,        </span>
+
+    <span class="token comment">/* Advanced Options */</span>
+    <span class="token string-property property">&quot;forceConsistentCasingInFileNames&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>                  
+</code></pre></div><h2 id="express-서버-설정-tsconfig-json"><a href="#express-서버-설정-tsconfig-json" class="header-anchor">#</a> express 서버 설정 (tsconfig.json)</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Basic Options */</span>
+    <span class="token comment">// &quot;incremental&quot;: true,                </span>
+    <span class="token string-property property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es6&quot;</span><span class="token punctuation">,</span>                         
+    <span class="token string-property property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>                    
+    <span class="token comment">// &quot;lib&quot;: [],                            </span>
+    <span class="token comment">// &quot;allowJs&quot;: true,                   </span>
+    <span class="token comment">// &quot;jsx&quot;: &quot;preserve&quot;,                 </span>
+    <span class="token comment">// &quot;declaration&quot;: true,             </span>
+    <span class="token comment">// &quot;declarationMap&quot;: true,             </span>
+    <span class="token comment">// &quot;sourceMap&quot;: true,             </span>
+    <span class="token comment">// &quot;outFile&quot;: &quot;./&quot;,                       </span>
+    <span class="token string-property property">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span><span class="token punctuation">,</span>                       
+    <span class="token string-property property">&quot;rootDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span><span class="token punctuation">,</span>                      
+    <span class="token comment">// &quot;composite&quot;: true,                   </span>
+    <span class="token comment">// &quot;tsBuildInfoFile&quot;: &quot;./&quot;,              </span>
+    <span class="token comment">// &quot;removeComments&quot;: true,             </span>
+    <span class="token comment">// &quot;noEmit&quot;: true,                      </span>
+    <span class="token comment">// &quot;importHelpers&quot;: true,             </span>
+    <span class="token comment">// &quot;downlevelIteration&quot;: true,           </span>
+    <span class="token comment">// &quot;isolatedModules&quot;: true,             </span>
+
+    <span class="token comment">/* Strict Type-Checking Options */</span>
+    <span class="token string-property property">&quot;strict&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                   
+    <span class="token comment">// &quot;noImplicitAny&quot;: true,                </span>
+    <span class="token comment">// &quot;strictNullChecks&quot;: true,              </span>
+    <span class="token comment">// &quot;strictFunctionTypes&quot;: true,           </span>
+    <span class="token comment">// &quot;strictBindCallApply&quot;: true,           </span>
+    <span class="token comment">// &quot;strictPropertyInitialization&quot;: true,  </span>
+    <span class="token comment">// &quot;noImplicitThis&quot;: true,               </span>
+    <span class="token comment">// &quot;alwaysStrict&quot;: true,                 </span>
+
+    <span class="token comment">/* Additional Checks */</span>
+    <span class="token comment">// &quot;noUnusedLocals&quot;: true,              </span>
+    <span class="token comment">// &quot;noUnusedParameters&quot;: true,        </span>
+    <span class="token comment">// &quot;noImplicitReturns&quot;: true,             </span>
+    <span class="token comment">// &quot;noFallthroughCasesInSwitch&quot;: true,    </span>
+
+    <span class="token comment">/* Module Resolution Options */</span>
+    <span class="token string-property property">&quot;moduleResolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span>            
+    <span class="token comment">// &quot;baseUrl&quot;: &quot;./&quot;,                     </span>
+    <span class="token comment">// &quot;paths&quot;: {},                           </span>
+    <span class="token comment">// &quot;rootDirs&quot;: [],                        </span>
+    <span class="token comment">// &quot;typeRoots&quot;: [],                      </span>
+    <span class="token comment">// &quot;types&quot;: [],                          </span>
+    <span class="token comment">// &quot;allowSyntheticDefaultImports&quot;: true,  </span>
+    <span class="token string-property property">&quot;esModuleInterop&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                 
+    <span class="token comment">// &quot;preserveSymlinks&quot;: true,             </span>
+    <span class="token comment">// &quot;allowUmdGlobalAccess&quot;: true,         </span>
+
+    <span class="token comment">/* Source Map Options */</span>
+    <span class="token comment">// &quot;sourceRoot&quot;: &quot;&quot;,    </span>
+    <span class="token comment">// &quot;mapRoot&quot;: &quot;&quot;,                      </span>
+    <span class="token comment">// &quot;inlineSourceMap&quot;: true,              </span>
+    <span class="token comment">// &quot;inlineSources&quot;: true,                 </span>
+
+    <span class="token comment">/* Experimental Options */</span>
+    <span class="token comment">// &quot;experimentalDecorators&quot;: true,        </span>
+    <span class="token comment">// &quot;emitDecoratorMetadata&quot;: true,        </span>
+
+    <span class="token comment">/* Advanced Options */</span>
+    <span class="token string-property property">&quot;forceConsistentCasingInFileNames&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>                  
+</code></pre></div><ul><li><p>target: 컴파일 할 Ecmascript 대상을 지정</p></li> <li><p>outDir: 컴파일 경로 지정</p></li> <li><p>rootDir: 컴파일할 대상의 root 디렉토리 지정 (이에 맞춰서 컴파일 시 나오는 outDir의 구조가 똑같이 만들어 집니다.)</p></li> <li><p>strict: 타입스크립트의 strict모드 활성화 여부</p></li></ul> <h2 id="package-json-설정"><a href="#package-json-설정" class="header-anchor">#</a> package.json 설정</h2> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;typescript-example&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;app.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;@types/express&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.17.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;@types/node&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^13.1.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;express&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.17.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;nodemon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;ts-node&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^8.5.4&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;ejs&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;typescript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.7.4&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>&quot;script&quot; 내용을 수정해줍니다.</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;scripts&quot;: {
+  &quot;start&quot;: &quot;node dist/app.js&quot;,
+  &quot;dev&quot;: &quot;nodemon app.ts&quot;,
+  &quot;build&quot;: &quot;tsc -p .&quot;
+}
+</code></pre></div><ul><li><p>start: 컴파일 후 나온 app.js 파일을 돌릴 명령어입니다.</p></li> <li><p>dev: nodemon으로 타입스크립트 파일을 돌려볼 명령어입니다. 컴파일시키지 않고 돌려만 볼 수도 있습니다.</p></li> <li><p>build: 실제로 컴파일해서 자바스크립트 파일을 생성해줍니다.</p></li></ul> <h2 id="폴더-구조-잡기"><a href="#폴더-구조-잡기" class="header-anchor">#</a> 폴더 구조 잡기</h2> <p>app.ts 파일 생성
+routes 폴더
+views 폴더 생성
+routes/index.ts 생성
+views/index.ejs 생성</p> <h2 id="app-ts-에-express-코드-작성"><a href="#app-ts-에-express-코드-작성" class="header-anchor">#</a> app.ts 에 express 코드 작성</h2> <p>./app.ts</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code>
+<span class="token keyword">import</span> express<span class="token punctuation">,</span> <span class="token punctuation">{</span>Request<span class="token punctuation">,</span> Response<span class="token punctuation">,</span> NextFunction<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'express'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> indexRouter <span class="token keyword">from</span> <span class="token string">&quot;./routes/index&quot;</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'views'</span><span class="token punctuation">,</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'views'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'view engine'</span><span class="token punctuation">,</span><span class="token string">'ejs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 템플릿 엔진 설정</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span>indexRouter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8001</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>  <span class="token comment">// 포트번호 설정</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'8001번 포트에서 서버 대기중입니다!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>./routes/index.ts</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> express <span class="token keyword">from</span> <span class="token string">'express'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token keyword">async</span> <span class="token punctuation">(</span>req<span class="token operator">:</span>express<span class="token punctuation">.</span>Request<span class="token punctuation">,</span>res<span class="token operator">:</span>express<span class="token punctuation">.</span>Response<span class="token punctuation">,</span> next<span class="token operator">:</span>express<span class="token punctuation">.</span>NextFunction<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> router<span class="token punctuation">;</span>
+</code></pre></div><p>./vies/index.ejs</p> <div class="language-ejs extra-class"><pre class="language-ejs"><code>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    hello
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="typescript-로-작성한-express-실행"><a href="#typescript-로-작성한-express-실행" class="header-anchor">#</a> typescript 로 작성한 express 실행</h2> <ul><li>npm run dev</li></ul> <p>위 명령어를 터미널에 치게 되면 다음과 같이 서버가 실행된다.
+포트번호는 app.ts 에서 설정했음</p> <p>이후 이 타입스크립트 파일을 컴파일해서 js로 변환할 수 있다.</p> <ul><li>npm run build</li></ul> <p>이후 컴파일된 파일은 js파일로 가동할 수 있다.</p> <ul><li>npm start</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Java/ch13.html" class="prev">
+        ch13. 객체 지향 프로그래밍
+      </a></span> <span class="next"><a href="/NodeJs/nodejs_requestip.html">
+        nodeJs request-ip 사용법
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.7830cfe4.js" defer></script><script src="/assets/js/2.fd64779e.js" defer></script><script src="/assets/js/1.87595a30.js" defer></script><script src="/assets/js/46.8d9e6921.js" defer></script>
+  </body>
+</html>
